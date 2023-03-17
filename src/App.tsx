@@ -1,4 +1,3 @@
-import './App.css';
 import NumberGame from './components/NumberGame/NumberGame';
 
 function App() {
