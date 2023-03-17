@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './NumberGame.css';
 
-function NumberGame() {
+const NumberGame = () => {
   const [number, setNumber] = useState(Math.floor(Math.random() * 100) + 1);
   const [guess, setGuess] = useState('');
   const [message, setMessage] = useState({ message: '', state: '' });
@@ -26,8 +26,6 @@ function NumberGame() {
     setGuess(event.target.value);
   };
 
-  console.log('number', number);
-
   return (
     <div className="wrapper">
       <p className="title">Guess a number between 1 and 100:</p>
@@ -45,6 +43,6 @@ function NumberGame() {
       <p className={`message_${message.state}`}>{message.message}</p>
     </div>
   );
-}
+};
 
 export default NumberGame;
